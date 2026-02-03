@@ -1,9 +1,9 @@
 # Real-time Fleet Management & Telematics Platform - AWS Architecture Documentation
+A production-grade, event-driven AWS architecture for real-time vehicle telemetry processing and fleet management.
+
+
 [![AWS](https://img.shields.io/badge/AWS-Cloud-orange?logo=amazon-aws)](https://aws.amazon.com)
 [![Terraform](https://img.shields.io/badge/IaC-Terraform-purple?logo=terraform)](https://terraform.io)
-[![Architecture](https://img.shields.io/badge/Architecture-Event--Driven-blue)](docs/architecture-overview.md)
-
-A production-grade, event-driven AWS architecture for real-time vehicle telemetry processing and fleet management.
 
 ---
 
@@ -59,3 +59,44 @@ This high-level architecture uses the [C4 Model](https://c4model.com/) (Level 1 
 | **Security** | VIN pseudonymization, KMS encryption, WAF |
 | **Cost Efficiency** | Serverless-first, intelligent tiering, pay-per-use |
 
+---
+
+## Key AWS Services
+
+| Service | Purpose | Why Chosen |
+|---------|---------|------------|
+| **Kinesis Data Streams** | Telemetry ingestion stream | Ordered events, replay & archive capability, low-latency |
+| **ECS Fargate** | Telemetry Consumer | Long-running processing, no server management, affordable |
+| **Lambda** | APIs & async processing | Auto-scaling, pay-per-invocation |
+| **DynamoDB** | Vehicle state & metadata | Serverless, single-digit ms latency |
+| **ElastiCache (Redis)** | Real-time state & pub/sub | In-memory speed for live updates |
+| **Cognito** | Authentication | Managed user identities and claim authentication |
+| **CloudFront** | Edge routing & CDN | Global performance, single domain |
+| **S3** | Static hosting & archives | Durable, cost-effective lifecycle policies |
+
+---
+
+## Repository Navigation
+### Placeholder
+
+---
+
+## Architecture Decision Records (ADRs)
+Every significant design choice is documented with context, rationale, tradeoffs, mitigations, and alternatives considered:
+| ADR | Decision |
+|-----|----------|
+| Placeholder | Placeholder |
+
+---
+## Infrastructure as Code
+Placeholder
+
+---
+
+## Purpose of this repo
+Placeholder
+
+---
+
+## Lessons Learned
+1. Placeholder
