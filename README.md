@@ -37,4 +37,25 @@ I'm approaching this architecture from a startup perspective, prioritizing cost 
 | Monthly Cost | $300 - $1,500 (scale dependent) |
 
 ## Architecture
-This high-level architecture uses the C4 Model (Level 1 - Context) to show system boundaries and external actors. 
+<p align="center">
+  <img src="diagrams/01-c4l1-system-context.png" alt="High Level Architecture" width="800"/>
+</p>
+This high-level architecture uses the [C4 Model](https://c4model.com/) (Level 1 - System Context) to show system boundaries and external actors.  Additional diagrams are available in ['diagrams/'](diagrams/).
+
+### Infrastructure Overview
+<p align="center">
+  <img src="diagrams/aws_infra_network_diagram.jpg" alt="AWS Infrastructure & Network Architecture" width="800"/>
+</p>
+
+---
+
+## Core Design Goals
+| Goal | Implementation |
+|------|----------------|
+| **Scalability** | Kinesis sharding, Fargate auto-scaling, DynamoDB on-demand |
+| **Low Latency** | Redis for real-time state, SSE for push updates |
+| **Multi-Tenancy** | Organization-scoped data, RBAC, JWT claims |
+| **Resilience** | DLQs, retry policies, idempotent processing |
+| **Security** | VIN pseudonymization, KMS encryption, WAF |
+| **Cost Efficiency** | Serverless-first, intelligent tiering, pay-per-use |
+
