@@ -41,13 +41,13 @@ As automotive manufacturers open APIs to consumers, barriers to entry are fallin
 - **Lower total cost** — No hardware, no installation logistics  
 - **Strategic shift** — This architecture becomes more relevant as OEM API access expands  
 
-Despite these trends, fleet management startups still face significant infrastructure challenges that established players have spent years—and millions of dollars—solving.
+Despite these trends, fleet management startups still face significant infrastructure challenges that established players have spent years and millions of dollars solving.
 
 ---
 
 ### 2.2 Problem Statement
 
-Tesla’s Fleet Telemetry provides real-time vehicle data streaming via WebSocket—but the raw data stream is only the starting point. Startups building on OEM telemetry APIs still face substantial infrastructure challenges:
+Tesla’s Fleet Telemetry provides real-time vehicle data streaming via WebSocket but the raw data stream is only the starting point. Startups building on OEM telemetry APIs still face substantial infrastructure challenges:
 
 | Challenge | Description | How This Architecture Addresses It |
 |-----------|-------------|------------------------------------|
@@ -60,7 +60,7 @@ Tesla’s Fleet Telemetry provides real-time vehicle data streaming via WebSocke
 | **Operational Overhead** | Small teams lack dedicated SRE | Managed services + IaC reduce ops burden |
 
 **Core problem:**  
-How do you transform a firehose of OEM vehicle telemetry into a secure, real-time, multi-tenant fleet platform—at production scale and startup-friendly cost?
+How do you transform a firehose of OEM vehicle telemetry into a secure, real-time, multi-tenant fleet platform at production scale and startup-friendly cost?
 
 ---
 
