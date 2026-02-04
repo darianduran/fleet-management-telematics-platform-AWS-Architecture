@@ -11,8 +11,6 @@ A production-grade, event-driven AWS architecture for real-time vehicle telemetr
 This repository is a **design-first, infrastructure-as-code (IaC) case study** showcasing cloud architecture, system design tradeoffs, Terraform practices, and operational readiness for a large-scale telemetry platform. 
 It documents how I would design, secure, deploy, and operate a large-scale fleet management and telematics platform capable of servicing tens of thousands of real-time vehicle events per second.
 
-**Data Source:** This architecture utilizes [Tesla's Fleet Telemetry & Vehicle APIs](https://github.com/teslamotors/fleet-telemetry) - the most mature OEM streaming API available to general consumers today. As automakers like Tesla and Volvo increasingly open telemetry access, this starts to becomes the future of fleet management solutions. This eliminates the need for any aftermarket hardware upfront costs or installations, offers richer data, and significantly reduces operational costs. The Tesla-specific components are isolated to the ingestion layer and vehicle command endpoint; the architecture patterns apply to any high volume telemetry source beyond that.
-
 **The scope of this repository includes:**
 - System design & architecture tradeoffs.
 - Event-driven, scalable AWS patterns.
@@ -26,10 +24,13 @@ It documents how I would design, secure, deploy, and operate a large-scale fleet
 
 **Note:** This is an architectural case study, not a full application codebase. The application showcase and source code will be released in separate repositories in the future.
 
+### Data Source
+This architecture utilizes [Tesla's Fleet Telemetry & Vehicle APIs](https://github.com/teslamotors/fleet-telemetry) - the most mature OEM streaming API available to general consumers today. As automakers like Tesla and Volvo increasingly open telemetry access, this starts to becomes the future of fleet management solutions. This eliminates the need for any aftermarket hardware upfront costs or installations, offers richer data, and significantly reduces operational costs. The Tesla-specific components are isolated to the ingestion layer and vehicle command endpoint; the architecture patterns apply to any high volume telemetry source beyond that.
+
 ### The Startup Lens
 I'm approaching this architecture from a startup perspective, prioritizing cost efficiency while minimizing performance or reliability degradation. While enterprise-scale solutions might choose differently, every decision here balances capability against budget constraints.
 
-**Target Scale:**
+### Target Scale
 | Metric | Target |
 |--------|--------|
 | Peak Telemetry Events | 10,000+ events/sec |
